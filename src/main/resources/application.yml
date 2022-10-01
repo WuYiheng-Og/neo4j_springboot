@@ -1,0 +1,10 @@
+spring:
+  neo4j:
+    uri: bolt://<YourNeo4jIpAddress>:7687
+    authentication:
+      username: <yourUserName>
+      password: <yourPassword>
+  # 指定数据库
+  data:
+    neo4j:
+      database: <yourDatabase>
