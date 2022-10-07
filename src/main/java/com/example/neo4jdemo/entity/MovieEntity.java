@@ -40,11 +40,11 @@ public class MovieEntity {
         }
     }
 
-    // 定义一个关系（参演）
+    // 定义一个关系（参演）注意directiond代表箭头方向，INCOMING箭头指向自己，OUTGOING箭头指向TargetNode
     @Relationship(type = "ACTED_IN", direction = Relationship.Direction.INCOMING)
     private List<Roles> actorsAndRoles = new ArrayList<>();
     // 定义一个关系（导演）
     @Relationship(type = "DIRECTED", direction = Relationship.Direction.INCOMING)
     private List<PersonEntity> directors = new ArrayList<>();
-    // 注意这些关系最终的箭头指向是当前实体，即TargetNode（PersonEntity）->当前定义Relationship的实体（MovieEntity）
+    // 注意这些关系最终的箭头指向（INCOMING）是当前实体，即TargetNode（PersonEntity）->当前定义Relationship的实体（MovieEntity）
 }
